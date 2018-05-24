@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addCounter } from '../actions';
 import { bindActionCreators } from 'redux';
-
+import Button from '@material-ui/core/Button';
 class AddCounter extends Component {
   constructor(props) {
         super(props);
@@ -13,7 +13,7 @@ class AddCounter extends Component {
             <form>
               <div className="field is-grouped">
                 <div className="control">
-                  <button className="button is-primary" onClick={(e) => {e.preventDefault();this.props.dispatch(addCounter())}}>Add</button>
+                  <Button className="button is-primary" variant="raised" color="primary" onClick={(e) => {e.preventDefault();this.props.dispatch(addCounter())}}>Add</Button>
                 </div>
               </div>
             </form>
